@@ -19,5 +19,15 @@ def increase_pets_sold(pet_shop, sold)
 end
 
 def stock_count(pet_shop)
-    return pet_shop[:pets].length
+    return pet_shop[:pets].length()
+end
+
+def pets_by_breed(pet_shop, breed)
+  pet_breed = []
+  for pet in pet_shop[:pets]
+    if pet[:breed] == breed
+      pet_breed.push(pet)
+    end
+  end
+  return pet_breed
 end
