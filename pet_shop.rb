@@ -25,9 +25,7 @@ end
 def pets_by_breed(pet_shop, breed)
   pet_breed = []
   for pet in pet_shop[:pets]
-    if pet[:breed] == breed
-      pet_breed.push(pet)
-    end
+    pet_breed.push(pet) if pet[:breed] == breed
   end
   return pet_breed
 end
